@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FormulirSkripsi</string>
+    <string name="form">Formulir Pengajuan Skripsi</string>
+    <string name="nama">Nama Mahasiswa</string>
+    <string name="nim">NIM</string>
+    <string name="konsen">Konsentrasi</string>
+    <string name="judul">Judul Skripsi</string>
+    <string name="dosbing1">Dosen Pembimbing 1</string>
+    <string name="dosbing2">Dosen Pembimbing 2</string>
+    <string name="p_haris">Haris Setiawan</string>
+    <string name="p_joko">Dwi Joko Purbohadi</string>
+    <string name="b_april">Aprilia Kurnianti</string>
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+</resources>
