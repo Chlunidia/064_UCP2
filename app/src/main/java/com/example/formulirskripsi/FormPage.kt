@@ -57,9 +57,6 @@ fun FormPage(
     }
     var listDataTxt: MutableList<String> = mutableListOf(txtName, txtNIM, txtKonsen, txtJudul,txtDosbing1, txtDosbing2)
     val context = LocalContext.current
-    val dataSource: DataSources
-    val stateUI by FormViewModel.stateUI.collectAsState()
-    dataSource = stateUI;
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -106,15 +103,12 @@ fun FormPage(
                 Text(text = "Dosen Pembimbing 1 :")
                 SelectDosbing1(
                     options = dosbing.map { id -> context.resources.getString(id) },
-                    onSelectionChanged = { FormViewModel.setDosbing1(it) }
                 )
             }
             Column {
                 Text(text = "Dosen pembimbing 2 :")
                 SelectDosbing2(
-                    options = dosbing.map { id -> context.resources.getString(id) },
-                    onSelectionChanged = { FormViewModel.setDosbing2(it) }
-                )
+                    options = dosbing.map { id -> context.resources.getString(id) },)
             }
         }
         Spacer(modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium)))
@@ -130,7 +124,7 @@ fun SelectDosbing1(
     onSelectionChanged: (String) -> Unit = {}
 ) {
     var selectedValue by rememberSaveable { mutableStateOf("") }
-    Row (
+    Column (
         modifier = Modifier
             .padding(10.dp)
     ){
@@ -165,7 +159,7 @@ fun SelectDosbing2(
     onSelectionChanged: (String) -> Unit = {}
 ) {
     var selectedValue by rememberSaveable { mutableStateOf("") }
-    Row (
+    Column (
         modifier = Modifier
             .padding(10.dp)
     ){
